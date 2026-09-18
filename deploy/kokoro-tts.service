@@ -1,0 +1,12 @@
+[Unit]
+Description=Kokoro-82M TTS Gradio demo (voice-to-voice)
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/Work/github/leandro-llosa/voice-to-voice
+ExecStart=%h/Work/github/leandro-llosa/voice-to-voice/.venv/bin/python app.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
